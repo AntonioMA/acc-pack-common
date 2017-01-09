@@ -258,6 +258,22 @@ public class OTWrapper {
   }
 
   /**
+   * Whether the local is sharing media (<code>true</code>) or not (
+   * <code>false</code>).
+   */
+  public boolean isPublishing() {
+    return isPublishing;
+  }
+
+  /**
+   * Whether the local is previewing (<code>true</code>) or not (
+   * <code>false</code>).
+   */
+  public boolean isPreviewing() {
+    return isPreviewing;
+  }
+
+  /**
    * Call to stop the camera's video in the Preview's view.
    */
   public void stopPreview() {
