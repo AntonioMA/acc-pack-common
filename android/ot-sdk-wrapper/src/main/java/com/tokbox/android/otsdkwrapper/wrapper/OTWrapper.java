@@ -1031,8 +1031,10 @@ public class OTWrapper {
       prefs.edit().putString("guidVSol", guidVSol).commit();
     }
 
-    mAnalyticsData = new OTKAnalyticsData.Builder(ClientLog.LOG_CLIENT_VERSION, source, ClientLog.LOG_COMPONENTID, guidVSol).build();
+    mAnalyticsData = new OTKAnalyticsData.
+      Builder(ClientLog.LOG_CLIENT_VERSION, source, ClientLog.LOG_COMPONENTID, guidVSol).build();
     mAnalytics = new OTKAnalytics(mAnalyticsData);
+    mAnalytics.enableConsoleLog(false);
 
     mAnalyticsData.setSessionId(getOTConfig().getSessionId());
     mAnalyticsData.setPartnerId(getOTConfig().getApiKey());
